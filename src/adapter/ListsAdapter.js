@@ -25,19 +25,19 @@ class ListsAdapter {
 
     }
 //
-//     update(name, id) {
-//         const list = {
-//             name: name,
-//         }
-//         return fetch(`${this.baseURL}/${id}`, {
-//             method: 'PATCH',
-//             headers: {
-//                 'content-type': 'application/json'
-//             },
-//             body: JSON.stringify(list)
-//         })
-//         .then(res => res.json())
-//     }
+    update(name, id) {
+        const list = {
+            name: name,
+        }
+        return fetch(`${this.baseURL}/${id}`, {
+            method: 'PATCH',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(list)
+        })
+        .then(res => res.json())
+    }
 //
 //     // ITEMS
 //
