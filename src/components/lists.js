@@ -4,7 +4,7 @@ class Lists {
         this.adapter = new ListsAdapter()
         this.fetchAndLoadLists()
         this.domElements()
-    //     this.initListeners()
+        this.initListeners()
     // }
     //
     fetchAndLoadLists() {
@@ -25,12 +25,12 @@ class Lists {
         this.itemsBox = document.querySelector( '.bottom' )
     // }
     //
-    // initListeners() {
-    //     this.listForm.addEventListener('submit', this.createList.bind(this))
-    //     this.listsBox.addEventListener('dblclick', this.editList.bind(this))
-    //     this.listsBox.addEventListener('blur', this.updateList.bind(this))
-    //     this.listsBox.addEventListener('click', this.renderItems.bind(this))
-    //     this.itemFormBox.addEventListener('submit', this.createItem.bind(this))
+    initListeners() {
+        this.listForm.addEventListener('submit', this.createList.bind(this))
+        this.listsBox.addEventListener('dblclick', this.editList.bind(this))
+        this.listsBox.addEventListener('blur', this.updateList.bind(this))
+        this.listsBox.addEventListener('click', this.renderItems.bind(this))
+        this.itemFormBox.addEventListener('submit', this.createItem.bind(this))
     // }
     //
     // createList(e) {
