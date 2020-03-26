@@ -82,14 +82,14 @@ class Lists {
     // item.addEventListener('click', this.handleDelete.bind(this))
     // }
     //
-    // renderItemForm(listId) {
-    //     return `<form data-listid="${listId}" id="item-form">
-    //     <input type="text" id="item-name" placeholder="Name" required>
-    //     <textarea type="text" id="item-description" placeholder="Description" required></textarea>
-    //     <input type="submit" value="Boom!">
-    //     </form>
-    //     `
-    // }
+    renderItemForm(listId) {
+        return `<form data-listid="${listId}" id="item-form">
+        <input type="text" id="item-name" placeholder="Name" required>
+        <textarea type="text" id="item-description" placeholder="Description" required></textarea>
+        <input type="submit" value="Boom!">
+        </form>
+        `
+    }
     //
     // createItem = (e) => {
     //     e.preventDefault()
