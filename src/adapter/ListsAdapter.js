@@ -1,13 +1,13 @@
 class ListsAdapter {
 
-//     constructor() {
-//         this.baseURL = "http://localhost:3000/lists"
-//     }
-//
-//     getLists() {
-//         return fetch(this.baseURL)
-//         .then(res => res.json())
-//     }
+    constructor() {
+        this.baseURL = "http://localhost:3000/lists"
+    }
+
+    getLists() {
+        return fetch(this.baseURL)
+        .then(res => res.json())
+    }
 //
 //     create(name) {
 //         const list = {
