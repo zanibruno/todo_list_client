@@ -110,12 +110,12 @@ class Lists {
         return this.itemsBox.innerHTML += `<div class="item-list" data-itemid="${item.id}" data-listid="${item.list_id}"><h4>${item.name}</h4>${item.description}<br><button class="delete-btn">Delete</button></div>`
     }
     //
-    // handleDelete(e) {
-    //     if(e.target && e.target.matches('button.delete-btn')) {
-    //         this.deleteItem(e)
-    //         e.stopPropagation()
-    //     }
-    // }
+    handleDelete(e) {
+        if(e.target && e.target.matches('button.delete-btn')) {
+            this.deleteItem(e)
+            e.stopPropagation()
+        }
+    }
     //
     // deleteItem(e) {
     //     this.itemId = parseInt(e.target.parentElement.dataset.itemid)
