@@ -45,21 +45,21 @@ class Lists {
         })
     }
     //
-    // editList(e) {
-    //     const list = e.target
-    //     list.contentEditable = true
-    //     list.focus()
-    //     list.classList.add( 'edit' )
-    // }
-    //
-    // updateList(e) {
-    //     const list = e.target
-    //     list.contentEditable = false
-    //     list.classList.remove('edit')
-    //     const name = list.innerHTML
-    //     const id = list.dataset.id
-    //     this.adapter.update(name, id)
-    // }
+    editList(e) {
+        const list = e.target
+        list.contentEditable = true
+        list.focus()
+        list.classList.add( 'edit' )
+    }
+
+    updateList(e) {
+        const list = e.target
+        list.contentEditable = false
+        list.classList.remove('edit')
+        const name = list.innerHTML
+        const id = list.dataset.id
+        this.adapter.update(name, id)
+    }
     //
     //
     // renderLists() {
