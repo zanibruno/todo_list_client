@@ -41,20 +41,20 @@ class ListsAdapter {
 //
 //     // ITEMS
 //
-//     createItems(name, description, id) {
-//         const item = {
-//             name: name,
-//             description: description
-//         }
-//         return fetch(`${this.baseURL}/${id}/items`, {
-//             method: 'POST',
-//             headers: {
-//                 'content-type': 'application/json'
-//             },
-//             body: JSON.stringify({item})
-//         })
-//         .then(res => res.json())
-//     }
+    createItems(name, description, id) {
+        const item = {
+            name: name,
+            description: description
+        }
+        return fetch(`${this.baseURL}/${id}/items`, {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify({item})
+        })
+        .then(res => res.json())
+    }
 //
 //     deleteItems(id) {
 //         return fetch(`http://localhost:3000/items/${id}`, {
