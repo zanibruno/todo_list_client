@@ -33,17 +33,17 @@ class Lists {
         this.itemFormBox.addEventListener('submit', this.createItem.bind(this))
     // }
     //
-    // createList(e) {
-    //     e.preventDefault()
-    //     const name = this.listNameField.value
-    //     debugger
-    //     this.adapter.create(name)
-    //     .then( list => {
-    //         this.lists.push(new List(list))
-    //         this.listNameField.value = ''
-    //         this.renderLists()
-    //     })
-    // }
+    createList(e) {
+        e.preventDefault()
+        const name = this.listNameField.value
+        debugger
+        this.adapter.create(name)
+        .then( list => {
+            this.lists.push(new List(list))
+            this.listNameField.value = ''
+            this.renderLists()
+        })
+    }
     //
     // editList(e) {
     //     const list = e.target
