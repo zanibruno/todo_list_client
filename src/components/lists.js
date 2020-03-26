@@ -91,20 +91,20 @@ class Lists {
         `
     }
     //
-    // createItem = (e) => {
-    //     e.preventDefault()
-    //     this.listId = parseInt(e.target.dataset.listid)
-    //     const name = document.getElementById( 'item-name').value
-    //     const description = document.getElementById('item-description').value
-    //     this.adapter.createItems(name, description, this.listId)
-    //     .then(item => {
-    //         this.lists.find((list) => list.id === this.listId).items.push(item)
-    //         this.renderNewItem(item)
-    //         debugger
-    //     })
-    //     document.getElementById('item-name').value = ''
-    //     document.getElementById('item-description').value=''
-    // }
+    createItem = (e) => {
+        e.preventDefault()
+        this.listId = parseInt(e.target.dataset.listid)
+        const name = document.getElementById( 'item-name').value
+        const description = document.getElementById('item-description').value
+        this.adapter.createItems(name, description, this.listId)
+        .then(item => {
+            this.lists.find((list) => list.id === this.listId).items.push(item)
+            this.renderNewItem(item)
+            debugger
+        })
+        document.getElementById('item-name').value = ''
+        document.getElementById('item-description').value=''
+    }
     //
     // renderNewItem(item) {
     //     return this.itemsBox.innerHTML += `<div class="item-list" data-itemid="${item.id}" data-listid="${item.list_id}"><h4>${item.name}</h4>${item.description}<br><button class="delete-btn">Delete</button></div>`
