@@ -117,15 +117,15 @@ class Lists {
         }
     }
     //
-    // deleteItem(e) {
-    //     this.itemId = parseInt(e.target.parentElement.dataset.itemid)
-    //     this.adapter.deleteItems(this.itemId)
-    //     const listId = parseInt(e.target.parentElement.dataset.listid)
-    //     const list = this.lists.find((list) => list.id === listId)
-    //     debugger
-    //     e.target.parentElement.remove()
-    //     list.items = list.items.filter((item) => list.id !== this.itemId)
-    // }
+    deleteItem(e) {
+        this.itemId = parseInt(e.target.parentElement.dataset.itemid)
+        this.adapter.deleteItems(this.itemId)
+        const listId = parseInt(e.target.parentElement.dataset.listid)
+        const list = this.lists.find((list) => list.id === listId)
+        debugger
+        e.target.parentElement.remove()
+        list.items = list.items.filter((item) => list.id !== this.itemId)
+    }
 
 
 }
