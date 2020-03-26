@@ -3,7 +3,7 @@ class Lists {
         this.lists = []
         this.adapter = new ListsAdapter()
         this.fetchAndLoadLists()
-    //     this.domElements()
+        this.domElements()
     //     this.initListeners()
     // }
     //
@@ -17,12 +17,12 @@ class Lists {
         })
     }
     //
-    // domElements() {
-    //     this.listsBox = document.getElementById( 'lists-container' )
-    //     this.listForm = document.getElementById( 'list-form' )
-    //     this.listNameField = document.getElementById( 'list-name' )
-    //     this.itemFormBox = document.getElementById( 'items-form-box' )
-    //     this.itemsBox = document.querySelector( '.bottom' )
+    domElements() {
+        this.listsBox = document.getElementById( 'lists-container' )
+        this.listForm = document.getElementById( 'list-form' )
+        this.listNameField = document.getElementById( 'list-name' )
+        this.itemFormBox = document.getElementById( 'items-form-box' )
+        this.itemsBox = document.querySelector( '.bottom' )
     // }
     //
     // initListeners() {
