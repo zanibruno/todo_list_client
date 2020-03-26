@@ -62,10 +62,10 @@ class Lists {
     }
     //
     //
-    // renderLists() {
-    //     this.listsBox.innerHTML = this.lists.map(list => list.renderListName()).join('')
-    //     debugger
-    // }
+    renderLists() {
+        this.listsBox.innerHTML = this.lists.map(list => list.renderListName()).join('')
+        debugger
+    }
     //
     // // ITEMS *******************************
     //
