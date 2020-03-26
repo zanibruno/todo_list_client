@@ -69,18 +69,18 @@ class Lists {
     //
     // // ITEMS *******************************
     //
-    // renderItems(e) {
-    // const listId = e.target.dataset.id
-    // this.itemFormBox.innerHTML = this.renderItemForm(listId)
-    // const items = this.lists.map(list => list.items.map(item => {
-    //     if (listId == item.list_id) {
-    //         return `<div class="item-list" data-itemid="${item.id}" data-listid="${listId}"><h4>${item.name}</h4>${item.description}<br><button class="delete-btn">Delete</button></div>`
-    //     }
-    // }))
-    // this.itemsBox.innerHTML = items.join('')
-    // const item = document.querySelector('.bottom')
-    // item.addEventListener('click', this.handleDelete.bind(this))
-    // }
+    renderItems(e) {
+    const listId = e.target.dataset.id
+    this.itemFormBox.innerHTML = this.renderItemForm(listId)
+    const items = this.lists.map(list => list.items.map(item => {
+        if (listId == item.list_id) {
+            return `<div class="item-list" data-itemid="${item.id}" data-listid="${listId}"><h4>${item.name}</h4>${item.description}<br><button class="delete-btn">Delete</button></div>`
+        }
+    }))
+    this.itemsBox.innerHTML = items.join('')
+    const item = document.querySelector('.bottom')
+    item.addEventListener('click', this.handleDelete.bind(this))
+    }
     //
     renderItemForm(listId) {
         return `<form data-listid="${listId}" id="item-form">
@@ -106,9 +106,9 @@ class Lists {
         document.getElementById('item-description').value=''
     }
     //
-    // renderNewItem(item) {
-    //     return this.itemsBox.innerHTML += `<div class="item-list" data-itemid="${item.id}" data-listid="${item.list_id}"><h4>${item.name}</h4>${item.description}<br><button class="delete-btn">Delete</button></div>`
-    // }
+    renderNewItem(item) {
+        return this.itemsBox.innerHTML += `<div class="item-list" data-itemid="${item.id}" data-listid="${item.list_id}"><h4>${item.name}</h4>${item.description}<br><button class="delete-btn">Delete</button></div>`
+    }
     //
     // handleDelete(e) {
     //     if(e.target && e.target.matches('button.delete-btn')) {
