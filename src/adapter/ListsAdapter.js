@@ -56,14 +56,14 @@ class ListsAdapter {
         .then(res => res.json())
     }
 //
-//     deleteItems(id) {
-//         return fetch(`http://localhost:3000/items/${id}`, {
-//             method: 'DELETE',
-//             headers: {
-//                 'content-type': 'application/json'
-//             }
-//         })
-//     }
+    deleteItems(id) {
+        return fetch(`http://localhost:3000/items/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'content-type': 'application/json'
+            }
+        })
+    }
 //
 //
 }
