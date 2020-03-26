@@ -1,21 +1,21 @@
 class Lists {
-    // constructor() {
-    //     this.lists = []
-    //     this.adapter = new ListsAdapter()
-    //     this.fetchAndLoadLists()
+    constructor() {
+        this.lists = []
+        this.adapter = new ListsAdapter()
+        this.fetchAndLoadLists()
     //     this.domElements()
     //     this.initListeners()
     // }
     //
-    // fetchAndLoadLists() {
-    //     this.adapter.getLists()
-    //     .then(lists => {
-    //         lists.forEach(list => this.lists.push(new List(list)))
-    //     })
-    //     .then( () => {
-    //         this.renderLists()
-    //     })
-    // }
+    fetchAndLoadLists() {
+        this.adapter.getLists()
+        .then(lists => {
+            lists.forEach(list => this.lists.push(new List(list)))
+        })
+        .then( () => {
+            this.renderLists()
+        })
+    }
     //
     // domElements() {
     //     this.listsBox = document.getElementById( 'lists-container' )
